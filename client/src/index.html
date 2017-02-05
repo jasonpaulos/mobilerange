@@ -8,9 +8,19 @@
 		<script src="js/socket.io.js"></script>
 		<script src="app/mobilerange.js"></script>
 		
+		<link rel="stylesheet" href="/css/style.css" />
+		
 		<title>MobileRange</title>
 	</head>
-	<body>
+	<body ng-controller="MainController">
+		
+		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			
+			<circle ng-repeat="shot in shots" ng-class="{lastShot: $last, regularShot: !$last}" ng-attr-cx="{{shot.x}}" ng-attr-cy="{{shot.y}}" r="2"></circle>
+			
+			<circle ng-if="avgShot" class="avgShot" ng-attr-cx="{{avgShot.x}}" ng-attr-cy="{{avgShot.y}}" r="2"></circle>
+			
+		</svg>
 		
 	</body>
 </html>

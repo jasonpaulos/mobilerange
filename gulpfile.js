@@ -27,3 +27,7 @@ gulp.task('build', [
 		])
 		.pipe(gulp.dest('client/dist'));
 });
+
+gulp.task('watch', function () {
+	return gulp.watch('client/src/**', ['build']);
+});

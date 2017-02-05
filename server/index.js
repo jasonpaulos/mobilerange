@@ -9,10 +9,19 @@ var server = http.createServer(app);
 var io = require('socket.io')(server);
 
 io.on('connection', function (client) {
+	console.log('client connected');
+	
 	client.on('some message', function (msg) {
-		
+		console.log(JSON.stringify(msg));
 	});
 });
+
+setInterval(function () {
+	io.emit('shot', {
+		x: Math.random() * 100,
+		y: Math.random() * 100
+	});
+}, 1000);
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 

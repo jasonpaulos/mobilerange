@@ -1,0 +1,24 @@
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body > svg {
+	height: 99vh;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.regularShot {
+	fill: #0000ff;
+}
+
+.lastShot {
+	fill: #ff0000;
+}
+
+.avgShot {
+	fill: #00ff00;
+}
