@@ -18,8 +18,7 @@ io.on('connection', function (client) {
 
 setInterval(function () {
 	io.emit('shot', {
-		x: Math.random() * 100,
-		y: Math.random() * 100
+		index: Math.floor(Math.random() * 109)
 	});
 }, 1000);
 

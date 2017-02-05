@@ -14,12 +14,12 @@
 	</head>
 	<body ng-controller="MainController">
 		
-		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+		<svg ng-attr-view_box="0 0 {{gridSide}} {{gridSide}}" xmlns="http://www.w3.org/2000/svg">
+			<circle ng-repeat="shot in shots" ng-class="{lastShot: $last, regularShot: !$last}" ng-attr-cx="{{shot.x}}" ng-attr-cy="{{shot.y}}" ng-attr-r="{{shotRadius}}"></circle>
 			
-			<circle ng-repeat="shot in shots" ng-class="{lastShot: $last, regularShot: !$last}" ng-attr-cx="{{shot.x}}" ng-attr-cy="{{shot.y}}" r="2"></circle>
+			<circle ng-repeat="hole in grid" class="gridHole" ng-attr-cx="{{hole.x}}" ng-attr-cy="{{hole.y}}" ng-attr-r="{{shotRadius}}"></circle>
 			
-			<circle ng-if="avgShot" class="avgShot" ng-attr-cx="{{avgShot.x}}" ng-attr-cy="{{avgShot.y}}" r="2"></circle>
-			
+			<circle ng-if="avgShot" class="avgShot" ng-attr-cx="{{avgShot.x}}" ng-attr-cy="{{avgShot.y}}" ng-attr-r="{{shotRadius}}"></circle>
 		</svg>
 		
 	</body>

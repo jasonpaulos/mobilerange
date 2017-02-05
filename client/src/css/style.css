@@ -1,14 +1,25 @@
 
 html, body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
+body {
+	overflow: hidden;
+}
+
 body > svg {
-	height: 99vh;
+	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+}
+
+.gridHole {
+	stroke: black;
+	stroke-width: .25;
+	fill-opacity: 0;
 }
 
 .regularShot {
