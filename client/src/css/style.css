@@ -1,6 +1,5 @@
 
 html, body {
-	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -26,10 +25,22 @@ body > svg {
 	fill: #0000ff;
 }
 
+.regularShotText {
+	color: #0000ff;
+}
+
 .lastShot {
 	fill: #ff0000;
 }
 
+.lastShotText {
+	color: #ff0000;
+}
+
 .avgShot {
 	fill: #00ff00;
+}
+
+.avgShotText {
+	color: #00ff00;
 }

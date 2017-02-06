@@ -30,6 +30,10 @@ module.exports = function register(server) {
 			}
 		});
 		
+		port.on('close', function () {
+			throw new Error('Serial connection closed');
+		});
+		
 		console.log('Serial connection open');
 	});
 };

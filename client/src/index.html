@@ -34,6 +34,18 @@
 		
 		<div class="controls">
 			<p>
+				<span class="regularShotText">Previous shots</span>
+				<br />
+				<span class="lastShotText">Latest shot</span>
+				<br />
+				<span class="avgShotText">Average of shots</span>
+			</p>
+			<p>
+				<button ng-click="clearShots()" ng-disabled="mode === 'Match' && !sightingPeriod">
+					Clear
+				</button>
+			</p>
+			<p>
 				<button ng-click="startMatch()" ng-disabled="mode === 'Match'">
 					Start Match
 				</button>

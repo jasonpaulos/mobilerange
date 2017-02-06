@@ -24,6 +24,11 @@ app.controller('MainController', ['$scope', 'socket',
 			$scope.avgShot = null;
 		};
 		
+		$scope.clearShots = function () {
+			$scope.shots = [];
+			$scope.avgShot = null;
+		};
+		
 		$scope.shotRadius = 2.6;
 		$scope.gridSide = 76.245;
 		$scope.groupSize = 15;

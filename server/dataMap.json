@@ -1,6 +1,6 @@
 {
   "A": {
-    "threshold": 57,
+    "threshold": 58,
     "values": [
       {
         "avg": 124.5,
@@ -37,7 +37,7 @@
     ]
   },
   "B": {
-    "threshold": 44,
+    "threshold": 57,
     "values": [
       {
         "avg": 119.5,
@@ -74,7 +74,7 @@
     ]
   },
   "C": {
-    "threshold": 46,
+    "threshold": 56,
     "values": [
       {
         "avg": 123,
@@ -111,7 +111,7 @@
     ]
   },
   "D": {
-    "threshold": 45,
+    "threshold": 56,
     "values": [
       {
         "avg": 125.5,
@@ -148,7 +148,7 @@
     ]
   },
   "E": {
-    "threshold": 51,
+    "threshold": 52,
     "values": [
       {
         "avg": 122.5,
@@ -185,7 +185,7 @@
     ]
   },
   "F": {
-    "threshold": 50,
+    "threshold": 55,
     "values": [
       {
         "avg": 128.5,
@@ -222,7 +222,7 @@
     ]
   },
   "G": {
-    "threshold": 51,
+    "threshold": 55,
     "values": [
       {
         "avg": 123.5,
@@ -259,7 +259,7 @@
     ]
   },
   "H": {
-    "threshold": 50,
+    "threshold": 55,
     "values": [
       {
         "avg": 132.5,
@@ -296,7 +296,7 @@
     ]
   },
   "I": {
-    "threshold": 54,
+    "threshold": 61,
     "values": [
       {
         "avg": 120.5,
@@ -321,7 +321,7 @@
     ]
   },
   "J": {
-    "threshold": 51,
+    "threshold": 55,
     "values": [
       {
         "avg": 121.5,
@@ -358,7 +358,7 @@
     ]
   },
   "K": {
-    "threshold": 54,
+    "threshold": 55,
     "values": [
       {
         "avg": 120.5,
@@ -395,7 +395,7 @@
     ]
   },
   "L": {
-    "threshold": 50,
+    "threshold": 53,
     "values": [
       {
         "avg": 123.5,
@@ -432,7 +432,7 @@
     ]
   },
   "M": {
-    "threshold": 50,
+    "threshold": 55,
     "values": [
       {
         "avg": 121.5,
@@ -469,7 +469,7 @@
     ]
   },
   "N": {
-    "threshold": 51,
+    "threshold": 55,
     "values": [
       {
         "avg": 130.5,

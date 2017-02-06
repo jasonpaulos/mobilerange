@@ -8,7 +8,10 @@ function Processor(io) {
 }
 
 Processor.prototype.processData = function processData(data) {
-	var possible = [];
+	var best = {
+		distance: Infinity,
+		index: -1
+	};
 	
 	for (var i = 0; i < dataKeys.length; i++) {
 		var key = dataKeys[i];
@@ -34,13 +37,20 @@ Processor.prototype.processData = function processData(data) {
 		}
 		
 		if (closest.index !== -1) {
-			possible.push(closest.index);
-			
-			console.log(key + ' ' + measured + ' matched ' + closest.index);
+			if (closest.distance < best.distance) {
+				best.distance = closest.distance;
+				best.index = closest.index;
+			}
 		}
 	}
 	
-	return possible;
+	if (best.index === -1) {
+		return [];
+	}
+	
+	console.log('Shot at index ' + best.index + ' with distance ' + best.distance);
+	
+	return [best.index];
 }
 
 module.exports = Processor;
