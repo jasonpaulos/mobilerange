@@ -1,0 +1,508 @@
+{
+  "A": {
+    "threshold": 57,
+    "values": [
+      {
+        "avg": 124.5,
+        "index": 15
+      },
+      {
+        "avg": 110.5,
+        "index": 6
+      },
+      {
+        "avg": 102,
+        "index": 14
+      },
+      {
+        "avg": 91,
+        "index": 5
+      },
+      {
+        "avg": 82.5,
+        "index": 13
+      },
+      {
+        "avg": 75.5,
+        "index": 4
+      },
+      {
+        "avg": 65,
+        "index": 12
+      },
+      {
+        "avg": 61,
+        "index": 3
+      }
+    ]
+  },
+  "B": {
+    "threshold": 44,
+    "values": [
+      {
+        "avg": 119.5,
+        "index": 2
+      },
+      {
+        "avg": 109,
+        "index": 11
+      },
+      {
+        "avg": 100.5,
+        "index": 10
+      },
+      {
+        "avg": 94,
+        "index": 1
+      },
+      {
+        "avg": 86,
+        "index": 9
+      },
+      {
+        "avg": 75.5,
+        "index": 0
+      },
+      {
+        "avg": 66.5,
+        "index": 8
+      },
+      {
+        "avg": 59,
+        "index": 7
+      }
+    ]
+  },
+  "C": {
+    "threshold": 46,
+    "values": [
+      {
+        "avg": 123,
+        "index": 28
+      },
+      {
+        "avg": 111.5,
+        "index": 39
+      },
+      {
+        "avg": 99,
+        "index": 40
+      },
+      {
+        "avg": 94,
+        "index": 29
+      },
+      {
+        "avg": 84,
+        "index": 18
+      },
+      {
+        "avg": 74.5,
+        "index": 19
+      },
+      {
+        "avg": 66.5,
+        "index": 30
+      },
+      {
+        "avg": 59.5,
+        "index": 41
+      }
+    ]
+  },
+  "D": {
+    "threshold": 45,
+    "values": [
+      {
+        "avg": 125.5,
+        "index": 42
+      },
+      {
+        "avg": 111.5,
+        "index": 44
+      },
+      {
+        "avg": 100,
+        "index": 33
+      },
+      {
+        "avg": 89.5,
+        "index": 32
+      },
+      {
+        "avg": 85,
+        "index": 31
+      },
+      {
+        "avg": 74.5,
+        "index": 20
+      },
+      {
+        "avg": 65.5,
+        "index": 21
+      },
+      {
+        "avg": 58.5,
+        "index": 22
+      }
+    ]
+  },
+  "E": {
+    "threshold": 51,
+    "values": [
+      {
+        "avg": 122.5,
+        "index": 36
+      },
+      {
+        "avg": 117,
+        "index": 47
+      },
+      {
+        "avg": 98.5,
+        "index": 46
+      },
+      {
+        "avg": 90,
+        "index": 35
+      },
+      {
+        "avg": 86,
+        "index": 24
+      },
+      {
+        "avg": 74.5,
+        "index": 23
+      },
+      {
+        "avg": 66.5,
+        "index": 34
+      },
+      {
+        "avg": 57,
+        "index": 45
+      }
+    ]
+  },
+  "F": {
+    "threshold": 50,
+    "values": [
+      {
+        "avg": 128.5,
+        "index": 72
+      },
+      {
+        "avg": 108.5,
+        "index": 71
+      },
+      {
+        "avg": 101,
+        "index": 60
+      },
+      {
+        "avg": 88,
+        "index": 49
+      },
+      {
+        "avg": 84,
+        "index": 38
+      },
+      {
+        "avg": 74.5,
+        "index": 27
+      },
+      {
+        "avg": 66,
+        "index": 16
+      },
+      {
+        "avg": 57.5,
+        "index": 17
+      }
+    ]
+  },
+  "G": {
+    "threshold": 51,
+    "values": [
+      {
+        "avg": 123.5,
+        "index": 80
+      },
+      {
+        "avg": 113.5,
+        "index": 81
+      },
+      {
+        "avg": 103,
+        "index": 70
+      },
+      {
+        "avg": 91,
+        "index": 59
+      },
+      {
+        "avg": 82,
+        "index": 48
+      },
+      {
+        "avg": 74,
+        "index": 37
+      },
+      {
+        "avg": 66,
+        "index": 26
+      },
+      {
+        "avg": 58,
+        "index": 25
+      }
+    ]
+  },
+  "H": {
+    "threshold": 50,
+    "values": [
+      {
+        "avg": 132.5,
+        "index": 50
+      },
+      {
+        "avg": 105,
+        "index": 61
+      },
+      {
+        "avg": 94.5,
+        "index": 73
+      },
+      {
+        "avg": 90.5,
+        "index": 62
+      },
+      {
+        "avg": 85,
+        "index": 51
+      },
+      {
+        "avg": 71.5,
+        "index": 52
+      },
+      {
+        "avg": 65.5,
+        "index": 63
+      },
+      {
+        "avg": 58.5,
+        "index": 74
+      }
+    ]
+  },
+  "I": {
+    "threshold": 54,
+    "values": [
+      {
+        "avg": 120.5,
+        "index": 54
+      },
+      {
+        "avg": 114.5,
+        "index": 53
+      },
+      {
+        "avg": 101,
+        "index": 45
+      },
+      {
+        "avg": 93.5,
+        "index": 55
+      },
+      {
+        "avg": 84,
+        "index": 65
+      }
+    ]
+  },
+  "J": {
+    "threshold": 51,
+    "values": [
+      {
+        "avg": 121.5,
+        "index": 58
+      },
+      {
+        "avg": 113,
+        "index": 69
+      },
+      {
+        "avg": 101,
+        "index": 79
+      },
+      {
+        "avg": 90,
+        "index": 68
+      },
+      {
+        "avg": 85.5,
+        "index": 57
+      },
+      {
+        "avg": 73,
+        "index": 56
+      },
+      {
+        "avg": 65.5,
+        "index": 67
+      },
+      {
+        "avg": 58,
+        "index": 78
+      }
+    ]
+  },
+  "K": {
+    "threshold": 54,
+    "values": [
+      {
+        "avg": 120.5,
+        "index": 64
+      },
+      {
+        "avg": 109.5,
+        "index": 66
+      },
+      {
+        "avg": 100.5,
+        "index": 77
+      },
+      {
+        "avg": 88,
+        "index": 76
+      },
+      {
+        "avg": 83,
+        "index": 75
+      },
+      {
+        "avg": 73.5,
+        "index": 86
+      },
+      {
+        "avg": 66,
+        "index": 87
+      },
+      {
+        "avg": 58,
+        "index": 88
+      }
+    ]
+  },
+  "L": {
+    "threshold": 50,
+    "values": [
+      {
+        "avg": 123.5,
+        "index": 82
+      },
+      {
+        "avg": 107,
+        "index": 93
+      },
+      {
+        "avg": 102,
+        "index": 83
+      },
+      {
+        "avg": 95.5,
+        "index": 84
+      },
+      {
+        "avg": 87,
+        "index": 94
+      },
+      {
+        "avg": 75.5,
+        "index": 102
+      },
+      {
+        "avg": 66.5,
+        "index": 95
+      },
+      {
+        "avg": 58,
+        "index": 85
+      }
+    ]
+  },
+  "M": {
+    "threshold": 50,
+    "values": [
+      {
+        "avg": 121.5,
+        "index": 103
+      },
+      {
+        "avg": 107,
+        "index": 96
+      },
+      {
+        "avg": 99.5,
+        "index": 104
+      },
+      {
+        "avg": 93,
+        "index": 105
+      },
+      {
+        "avg": 83,
+        "index": 97
+      },
+      {
+        "avg": 73.5,
+        "index": 98
+      },
+      {
+        "avg": 65.5,
+        "index": 106
+      },
+      {
+        "avg": 57.5,
+        "index": 107
+      }
+    ]
+  },
+  "N": {
+    "threshold": 51,
+    "values": [
+      {
+        "avg": 130.5,
+        "index": 92
+      },
+      {
+        "avg": 107,
+        "index": 101
+      },
+      {
+        "avg": 100.5,
+        "index": 91
+      },
+      {
+        "avg": 92,
+        "index": 90
+      },
+      {
+        "avg": 88.5,
+        "index": 100
+      },
+      {
+        "avg": 76.5,
+        "index": 108
+      },
+      {
+        "avg": 67,
+        "index": 99
+      },
+      {
+        "avg": 59,
+        "index": 89
+      }
+    ]
+  }
+}

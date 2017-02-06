@@ -14,13 +14,45 @@
 	</head>
 	<body ng-controller="MainController">
 		
+		<div class="controls">
+			<h2>{{mode}}</h2>
+			<h3 ng-show="sightingPeriod">
+				Sighting Period
+			</h3>
+			<h3 ng-show="shotsRemaining > -1">
+				Shots Remaining: {{shotsRemaining}}
+			</h3>
+		</div>
+		
 		<svg ng-attr-view_box="0 0 {{gridSide}} {{gridSide}}" xmlns="http://www.w3.org/2000/svg">
-			<circle ng-repeat="shot in shots" ng-class="{lastShot: $last, regularShot: !$last}" ng-attr-cx="{{shot.x}}" ng-attr-cy="{{shot.y}}" ng-attr-r="{{shotRadius}}"></circle>
+			<circle ng-repeat="shot in shots" ng-class="{lastShot: $last, regularShot: !$last}" ng-attr-cx="{{shot.x + rightAdjustment}}" ng-attr-cy="{{shot.y + downAdjustment}}" ng-attr-r="{{shotRadius}}"></circle>
 			
 			<circle ng-repeat="hole in grid" class="gridHole" ng-attr-cx="{{hole.x}}" ng-attr-cy="{{hole.y}}" ng-attr-r="{{shotRadius}}"></circle>
 			
-			<circle ng-if="avgShot" class="avgShot" ng-attr-cx="{{avgShot.x}}" ng-attr-cy="{{avgShot.y}}" ng-attr-r="{{shotRadius}}"></circle>
+			<circle ng-if="avgShot" class="avgShot" ng-attr-cx="{{avgShot.x + rightAdjustment}}" ng-attr-cy="{{avgShot.y + downAdjustment}}" ng-attr-r="{{shotRadius}}"></circle>
 		</svg>
+		
+		<div class="controls">
+			<p>
+				<button ng-click="startMatch()" ng-disabled="mode === 'Match'">
+					Start Match
+				</button>
+				<button ng-click="endSighting()" ng-disabled="!sightingPeriod">
+					End sighting period
+				</button>
+			</p>
+			<p>
+				<label for="groupSize">Group size: </label>
+				<input type="number" id="groupSize" ng-model="groupSize" ng-change="updateAvg()" min="1" step="1" />
+			</p>
+			<p>
+				<label for="rightAdjustment">Right adjustment (mm): </label>
+				<input type="number" id="rightAdjustment" ng-model="rightAdjustment" step=".1" />
+				<br />
+				<label for="downAdjustment">Down adjustment (mm): </label>
+				<input type="number" id="downAdjustment" ng-model="downAdjustment" step=".1" />
+			</p>
+		</div>
 		
 	</body>
 </html>

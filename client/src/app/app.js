@@ -3,28 +3,50 @@ var app = angular.module('mobilerange', []);
 app.controller('MainController', ['$scope', 'socket',
 	function ($scope, socket) {
 		$scope.shots = [];
+		$scope.shotsHistory = [];
 		$scope.avgShot = null;
+		$scope.mode = 'Practice';
+		$scope.shotsRemaining = -1;
+		$scope.sightingPeriod = false;
+		
+		$scope.startMatch = function () {
+			$scope.mode = 'Match';
+			$scope.sightingPeriod = true;
+			$scope.shots = [];
+			$scope.avgShot = null;
+			$scope.shotsHistory = [];
+		};
+		
+		$scope.endSighting = function () {
+			$scope.sightingPeriod = false;
+			$scope.shotsRemaining = 60;
+			$scope.shots = [];
+			$scope.avgShot = null;
+		};
 		
 		$scope.shotRadius = 2.6;
 		$scope.gridSide = 76.245;
+		$scope.groupSize = 15;
+		$scope.rightAdjustment = 0;
+		$scope.downAdjustment = 0;
 		
 		$scope.grid = [];
 		
 		var gridSpaceBetweenHoles = 6;
 		var gridOffset = $scope.gridSide/2 - gridSpaceBetweenHoles * 5;
-		for (var x = 0; x < 11; x++) {
-			var yMin = 0;
-			var yMax = 11;
+		for (var y = 0; y < 11; y++) {
+			var xMin = 0;
+			var xMax = 11;
 			
-			if (x === 0 || x === 10) {
-				yMin = 2;
-				yMax = 9;
-			} else if (x === 1 || x === 9) {
-				yMin = 1;
-				yMax = 10;
+			if (y === 0 || y === 10) {
+				xMin = 2;
+				xMax = 9;
+			} else if (y === 1 || y === 9) {
+				xMin = 1;
+				xMax = 10;
 			}
 			
-			for (var y = yMin; y < yMax; y++) {
+			for (var x = xMin; x < xMax; x++) {
 				$scope.grid.push({
 					x: gridOffset + x * gridSpaceBetweenHoles,
 					y: gridOffset + y * gridSpaceBetweenHoles
@@ -32,19 +54,8 @@ app.controller('MainController', ['$scope', 'socket',
 			}
 		}
 		
-		socket.on('shot', function (shot) {
-			var hole = $scope.grid[shot.index];
-			
-			$scope.shots.push({
-				x: hole.x,
-				y: hole.y
-			});
-			
+		$scope.updateAvg = function () {
 			if ($scope.shots.length >= 2) {
-				if ($scope.shots.length > 15) {
-					$scope.shots.shift();
-				}
-				
 				$scope.avgShot = {
 					x: 0,
 					y: 0
@@ -57,7 +68,42 @@ app.controller('MainController', ['$scope', 'socket',
 				
 				$scope.avgShot.x /= $scope.shots.length;
 				$scope.avgShot.y /= $scope.shots.length;
+			} else {
+				$scope.avgShot = null;
 			}
+		}
+		
+		socket.on('shot', function (shots) {
+			for (var i = 0; i < shots.length; i++) {
+				var hole = $scope.grid[shots[i]];
+				
+				$scope.shots.push({
+					x: hole.x,
+					y: hole.y
+				});
+				
+				if ($scope.mode === 'Match' && !$scope.sightingPeriod) {
+					if ($scope.shots.length >= $scope.groupSize) {
+						$scope.shotsHistory = $scope.shotsHistory.concat($scope.shots);
+						$scope.shots = [];
+					}
+					
+					$scope.shotsRemaining--;
+					
+					if ($scope.shotsRemaining < 0) {
+						endMatch();
+					}
+				}
+			}
+			
+			$scope.updateAvg();
 		});
+		
+		function endMatch() {
+			$scope.mode = 'Practice';
+			$scope.shotsRemaining = -1;
+			$scope.shots = [];
+			$scope.avgShot = null;
+		}
 	}
 ]);
